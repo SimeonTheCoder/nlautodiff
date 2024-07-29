@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 
-public enum CustomOperation implements Operation {
+public enum nlautodiff implements Operation {
     PING {
         @Override
         public ObjType[] getArguments() {
@@ -136,7 +136,7 @@ public enum CustomOperation implements Operation {
         }
     };
 
-    public CustomOperation value(String str) {
+    public nlautodiff value(String str) {
         return switch (str) {
             case "PING" -> PING;
             case "DPR" -> DPR;
@@ -148,6 +148,6 @@ public enum CustomOperation implements Operation {
         };
     }
 
-    CustomOperation() {
+    nlautodiff() {
     }
 }
